@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title th:text="${title} + ' | Víctor Manuel Ordiales García'"></title>
+</head>
+
+<body>
+    <header class="bg-gray-800 text-white p-4 w-full" th:fragment="header">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-green-500 text-lg font-bold">Logo</a>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a th:href="@{/app/}" class="text-white hover:text-green-500">Home</a></li>
+                    <li><a th:href="@{/app/profile}" class="text-white hover:text-green-500">Profile</a></li>
+                    <li><a th:href="@{/app/list}" class="text-white hover:text-green-500">List</a></li>
+                    <li><a th:href="@{/params/}" class="text-white hover:text-green-500">Params</a></li>
+                    <li><a th:href="@{/variables/string/Saludos}" class="text-white hover:text-green-500">Variables</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <footer
+        class="bg-gray-800 text-green-500 text-lg font-bold p-4 w-full fixed bottom-0 flex items-center justify-center"
+        th:fragment="footer">
+        Copyright @ 2023 Samuraior.dev
+    </footer>
+</body>
+
+</html>

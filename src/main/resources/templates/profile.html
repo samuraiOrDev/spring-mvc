@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layout :: head"></head>
+
+<body class="bg-gray-950 text-white  h-screen w-screnn">
+
+    <header th:replace="layout :: header"></header>
+    <div class="flex items-center justify-center mt-[120px] flex-col">
+
+        <h1 class=" text-4xl text-green-500 font-bold">
+            Perfil de Usuario
+        </h1>
+        <ul class="bg-gray-800 mt-4 p-4 w-[350px] rounded-lg">
+            <li class="text-xl font-bold" th:text="'FirstName: ' + ${user.firstName}"></li>
+            <li class="text-xl font-bold" th:text="'FirstName: ' + ${user.lastName}"></li>
+            <li class="text-xl font-bold" th:text="'Edad: ' + ${user.age}"></li>
+        </ul>
+    </div>
+
+    <footer th:replace="layout :: footer"></footer>
+
+</body>
+
+</html>

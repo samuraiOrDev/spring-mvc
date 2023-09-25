@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Home | Víctor Manuel Ordiales García</title>
-</head>
+<head th:replace="layout :: head"></head>
 
-<body class="bg-gray-950 text-white flex items-center justify-center h-screen w-screnn">
-    <h1 th:text="${title}" class="text-3xl font-bold underline"></h1>
+<body class="bg-gray-950 text-white h-screen w-screnn">
+
+    <header th:replace="layout :: header"></header>
+
+    <div class="flex items-center justify-center mt-[120px] text-4xl text-green-500 font-bold">
+        Página Principal
+    </div>
+
+    <footer th:replace="layout :: footer"></footer>
+
 </body>
 
 </html>

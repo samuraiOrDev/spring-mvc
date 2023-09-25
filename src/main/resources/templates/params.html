@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layout :: head"></head>
+
+<body class="bg-gray-950 text-white h-screen w-screen">
+
+    <header th:replace="layout :: header"></header>
+
+    <div class="flex items-center justify-center flex-col mt-[120px] text-3xl text-green-500 font-bold">
+        <h2 th:text="${texto}"></h2>
+        <h2 th:text="${age}"></h2>
+        <h2 th:text="${saludos}"></h2>
+        <ul class="mt-[40px]">
+            <li><a th:href="@{/params?texto=valor1}" class="text-xl text-white">/params?texto=valor1</a></li>
+            <li><a th:href="@{/params?texto=valor1&age=30}" class="text-xl text-white">/params?texto=valor1&age=30</a>
+            </li>
+            <li><a th:href="@{/params?texto=valor1&age=30&saludos=Saludos}"
+                    class="text-xl text-white">/params?texto=valor1&age=30&saludos=Saludo</a>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <footer th:replace="layout :: footer"></footer>
+
+</body>
+
+</html>
